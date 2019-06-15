@@ -1,0 +1,217 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body,html {
+    min-height:100%;
+}
+
+body{
+    background-color: #F7F8FC;
+}
+
+.leaderboard {
+    position:relative;
+    width:60%;
+    height:60%;
+    max-width:960px;
+    min-width:400px;
+    min-height:600px;
+    margin: 0px auto 0 auto;
+    padding:1%;
+}
+
+.leaderboard h1{
+    text-transform: uppercase;
+    padding:0;
+    color: #3db685;
+}
+
+.content {
+    position:relative;
+    width:70%;
+    margin:3px auto 0 auto;
+    min-width:300px;
+
+}
+
+.content ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    border:5px solid #CCC;
+    background-color: #F7F8FC;
+}
+.content ul li{
+    position: relative;
+    color:#213f81;
+    font-family: helvetica;
+    padding:2% 5%;
+    border-bottom: 2px solid #555;
+}
+
+.content ul li:last-child{
+    border-bottom:none;
+}
+
+.name{
+    font-weight:bold;
+}
+.count{
+    display:inline-block;
+    float:right;
+    color: #3db685;
+    font-weight:bold;
+}
+.count:after{
+    content:' Likes';
+    color:#CCC;
+    font-size:80%;
+    font-weight:normal;
+}
+
+
+/********* BLING **********/
+.content ul{
+    border-radius: 20px;
+}
+
+.animate {
+    -moz-animation: flashIt 0.2s ease 1;
+    -webkit-animation: flashIt 0.2s ease 1;
+    animation: flashIt 0.2s ease 1;
+}
+
+.animate .countold{
+    -moz-animation: spinIt 0.3s ease 1;
+    -webkit-animation: spinIt 0.3s ease 1;
+    animation: spinIt 0.3s ease 1;
+}
+
+.dropbtn {
+    position: relative;
+    margin: 0px auto 0 auto;
+    background-color: #3db685;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #1f8f62;
+  }
+  
+  #myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #myInput:focus {outline: 3px solid #ddd;}
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    margin-right:auto;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #3db685;
+    padding: 5px 5px;
+    margin-right:auto;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown a:hover {background-color: rgb(124, 121, 121);}
+  
+  .show {display: block;}
+
+  .sort {
+    cursor: pointer;
+  }
+  
+  .userImg {
+    height: 30px;
+    margin-right: 10px;
+    width: 30px;
+  }
+  
+  .sort-true:after {
+    content: '\25bc';
+    font-size: 13px;
+    margin-left: 5px;
+  }
+
+
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){
+      background-color: #f2f2f2;
+      font-size: 16px;
+      text-align: center;
+    }
+
+@-moz-keyframes flashIt {
+    100% { opacity: 0; background-color: #FFF;}
+}
+@-webkit-keyframes flashIt {
+    100% { opacity: 0; background-color: #FFF;}
+}
+@keyframes flashIt {
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes spinIt {
+    20% {-moz-transform: rotate(-10deg)}
+    40% {-moz-transform: rotate(10deg)}
+    60% {-moz-transform: rotate(-10deg)}
+    80% {-moz-transform: rotate(10deg)}
+    100% {-moz-transform: rotate(-10deg)}
+}
+@-webkit-keyframes spinIt {
+    20% {-webkit-transform: rotate(-10deg)}
+    40% {-webkit-transform: rotate(10deg)}
+    60% {-webkit-transform: rotate(-10deg)}
+    80% {-webkit-transform: rotate(10deg)}
+    100% {-webkit-transform: rotate(-10deg)}
+}
+@keyframes spinIt {
+     20% {transform: rotate(-10deg)}
+     40% {transform: rotate(10deg)}
+     60% {transform: rotate(-10deg)}
+     80% {transform: rotate(10deg)}
+     100% {transform: rotate(-10deg)}
+ }

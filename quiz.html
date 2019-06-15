@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Hackathon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/quiz.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+      <img src="./images/logo.png" alt="Q QUBOX"  class="navbar-brand" style="width: 15%; height:15%; margin-bottom: 0px;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                  <!-- <li><a href="#" style="color:white;">Scorecard</a></li>
+                  <li><a href="#" style="color:white;">Logout</a></li> -->
+                  <!-- <li><a href="#"><img src="images/poweroff.png" alt="Logout" style="width:30px;height:30px;"></a></li> -->
+              </ul>
+            </div>
+    </div>
+</nav>
+
+
+<!-- Quiz Slider -->
+
+<div class="container-fluid">
+  <div class="modal-dialog">
+    <div class="modal-content">
+       <div class="modal-header">
+          <h3 id="q_id"><span class="label label-warning" id="qid">2</span> Question will be placed here</h3>
+      </div>
+      <div class="modal-body">
+          <!-- <div class="col-xs-3 col-xs-offset-5">
+             <div id="loadbar" style="display: none;">
+                <div class="blockG" id="rotateG_01"></div>
+                <div class="blockG" id="rotateG_02"></div>
+                <div class="blockG" id="rotateG_03"></div>
+                <div class="blockG" id="rotateG_04"></div>
+                <div class="blockG" id="rotateG_05"></div>
+                <div class="blockG" id="rotateG_06"></div>
+                <div class="blockG" id="rotateG_07"></div>
+                <div class="blockG" id="rotateG_08"></div>
+            </div>
+        </div> -->
+         <!-- Trigger/Open The Modal --> 
+        <div class="quiz" id="quiz" data-toggle="buttons">
+         <label id="option1"class="element-animation1 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="1">1 One</label>
+         <label id="option2"class="element-animation2 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="2">2 Two</label>
+         <label id="option3"class="element-animation3 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="3">3 Three</label>
+         <label id="option4"class="element-animation4 btn btn-lg btn-primary btn-block"><span class="btn-label"><i class="glyphicon glyphicon-chevron-right"></i></span> <input type="radio" name="q_answer" value="4">4 Four</label>
+     </div>
+ </div>
+ <div class="modal-footer text-muted">
+  <span id="answer"></span>
+</div>
+</div>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-contentsubmit">
+    <span class="close">&times;</span>
+    <p>Instruction to Follow</p>
+
+    <div class="btn-s">
+        <button id="next_ques" class="btn-submit"  >Submit</button>
+    </div>  
+
+
+  </div>
+
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the button that opens the modal
+    var btn = document.getElementById("quiz");
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+<script src="../public/js/jquery-3.4.1.min.js"></script>
+<script src="../public/js/bootstrap.min.js"></script>
+
+<script src="../public/js/quiz.js"></script>
+<!-- <script src="./js/quiz_api.js"></script> -->
+
+
+<!-- Footer -->
+<footer class="footcontainer bg-4 text-center">
+  <p>Made By <a href="#"></a></p> 
+</footer>
+
+</body>
+</html>

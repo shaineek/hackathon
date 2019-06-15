@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Hackathon</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="./css/theme.css">
+  <link rel="stylesheet" href="./css/adminpanel.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">   
+      <div class="container">
+          <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="#">View User</a>
+              <a href="#">Score Board</a>
+            </div>
+          <img src="./images/logo.png" alt="Q QUBOX"  class="navbar-brand" style="width: 15%; height:15%; margin-bottom: 0px;">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>  
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#" style="color:white;">Scorecard</a></li>
+                  <li><a href="#" style="color:white;">Logout</a></li>
+                  <!-- <li><a href="#"><img src="images/poweroff.png" alt="Logout" style="width:30px;height:30px;"></a></li> -->
+                  <span class="side-nav-menu" style="font-size:25px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+                </ul>
+            </div>
+    </div>
+    
+</nav>
+
+<div class='leaderboard'>
+    <h1><span>Leader Board<br></span>
+      <div class="dropdown">
+        
+        <button onclick="myFunction()" class="dropbtn">Select Option</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a href="#" style="font-size: 20px;" >Maths</a>
+          <a href="#" style="font-size: 20px;" >Scince</a>
+          <a href="#g" style="font-size: 20px;" >Sports</a>
+          <a href="#" style="font-size: 20px;" >Verbal</a>
+          <a href="#" style="font-size: 20px;" >All</a>
+        </div>
+      </div>
+    </h1>
+    <div class="content">
+      <!-- <div style="overflow-x:auto;">
+        <table>
+          <tr>
+            <th>User Name</th>
+            <th>Category</th>
+            <th>Score</th>
+          </tr>
+          <tr>
+            <td>XYZ PERSON</td>
+            <td>SCIENCE</td>
+            <td>50%</td>
+          </tr>
+        </table>
+      </div> -->
+    </div>
+  
+</div>
+
+
+<script src="./js/leaderboard.js"></script>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script>
+  /* When the user clicks on the button,
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
+  </script>
+
+
+<!-- Footer -->
+<footer class="footcontainer bg-4 text-center">
+  <p>Made By <a href="#"></a></p> 
+</footer>
+
+</body>
+</html>
